@@ -1,0 +1,7 @@
+http://stackoverflow.com/questions/24205906/angularjs-ng-include-multiple-elements-one-after-another-on-click
+
+<span ng-click="include(temp1.html)"> Block 1 </span>
+<span ng-click="include(temp2.html)"> Block 2 </span>
+<span ng-click="include(temp3.html)"> Block 3 </span>
+
+<div ng-include="include(x)"> Content from blocks goes here </div>

@@ -1,0 +1,556 @@
+@charset UTF-8;
+/* 
+	Nome:CalculadoraFatec
+	Data: 17 DEZ 2014
+	Descrição:  Estilo para o Sistema Calculadora Fatec
+	Versão: 0.1
+	Autor: Gregorio Queiroz
+	Autor URI:http://calculadorafatec.gregmaster.com.br
+*/
+*{
+  margin:0; padding:0; border:0;
+}
+a,a:hover, a:focus ,a:active{
+	/*color: #fff; */
+	text-decoration: none; 
+	outline: 0px;
+}
+/* lists */
+.l1, .l1 li, .l2, .l2 li { width: 100%; float: left; display: block; position: relative; }
+.l2,.l2 li { width: auto; }
+
+/* floats */
+.fL { float: left; }
+.fR { float: right; }
+html{
+height: 100%;
+}
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+  height: 100%;
+}
+.pagina{
+	height:100%;
+}
+.cabecalho {
+  min-height: 60px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  border-bottom: 1px solid #ccc;
+  background: #ECECEC;
+  /*background: transparent;*/
+  z-index: 1;
+  /*float:left;*/
+  /*width:100%;*/
+  font-size:12px;
+  line-height: 1px;
+}
+
+.cabecalho img.calculadora{
+	float:left;
+	padding:5px 1px 3px 0px;
+}
+
+.cabecalho h1 {
+  padding: 10px 0 0 10px;
+  float:left;
+  color:#942019;
+}
+
+.cabecalho ul {
+  padding: 15px 10px 0 0;
+}
+
+.cabecalho li {
+  border-left: 1px solid #ccc;
+}
+
+.cabecalho li:first-child {
+  border: none;
+}
+
+.cabecalho li a {
+  display: block;
+  padding: 0 10px;
+  color: #999;
+  font-size: 16px;
+  line-height: 30px;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #fff;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.cabecalho li a:hover {
+  color: #333;
+}
+
+.cabecalho input[type="checkbox"] {
+  display: none;
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+}
+/*Conteudo*/
+.conteudo{
+	float:left;
+	margin-top:61px;
+	/*background:purple;*/
+	width:100%;
+	min-height:85%;
+	/*height:100%;*/
+}
+.main{
+	height:100%;
+	min-height:100%;
+	max-height:100%;
+	/*background:green;*/
+}
+.conteudo .col-esquerda,.conteudo .col-central {
+	/*float:left;*/
+	/*width:33%;*/
+	/*margin-left:1%;*/
+	/*padding-left:10px;
+	min-height:300px;*/	
+	/*height:100%;*/
+	/*margin-top:15px;*/
+}
+
+.conteudo .col-esquerda{
+	/*background:yellow;*/
+	/*margin-right:10px;*/
+	
+}
+.conteudo .col-central{
+	/*width:65%;*/
+	/*background:gray;*/
+	/*height:100%;*/
+	/*box-shadow: 5px -17px 45px -5px #959595; */
+}
+
+/*Rodape*/
+
+	#containerRodape{ 
+		position:fixed; 
+		bottom:0; 
+		width:100%; 
+		color:#FFFFFF;
+		/*border-top:4px solid #0099FF;
+		border-top:4px solid #000;
+		border-top:4px solid #007c44;
+		border-top:4px solid #7C7C7C;*/
+		border-top:4px solid #000;
+	}
+	
+	#rodape{ 
+		display:none; /* esconde o rodape */
+		width:100%; 
+		height:200px; 
+		margin:0 auto;
+		text-align:center;
+		background-color:#0066CC;
+		background:black;
+		background:#ccc;
+		color:#FFFFFF;
+		font-family:Espn;
+		z-index:2;
+
+	}
+	#icone{ 
+		position:absolute;
+		top: -28px; /* posicionamento */
+		right:5px;
+		float:right;
+		z-index:9999; /* sobrepondo */
+		height:24px; /* altura do icone */
+		width:24px; /* largura do icone */
+		cursor:pointer;
+	}
+/*rodape_toggle*/
+	.plus{ background:url(../img/plus.png) no-repeat; }
+	.minus{ background:url(../img/minus.gif) no-repeat; }
+	.plus,.minus{background:url(../img/rodape_toggle.png) no-repeat;}
+
+
+	.marca_srt{
+		width:100%;
+		float:left;
+		background:#e5b100;
+		background:#3353a4;
+		color:#a15341;
+		color:#942019;
+		color:#fff;
+		font-weight:bold;
+	}
+	.marca_srt:hover{
+		color:#a15341;
+		color:#fff;
+	}
+
+	/*Logo com transparencia*/
+	.img_rodape{
+		/*opacity:0.5;
+		filter:alpha(opacity=50); /* For IE8 and earlier */
+		position:relative;
+		margin:0 auto;
+		padding-top:5px;
+		top:25%;
+	}
+	.design_by{
+		/*width:100%;*/
+		margin-left:10px;
+		text-align:left;
+		/*background:purple;*/
+		clear:both;	
+		float:left;
+		font-size:x-small;
+		color:#a15341;
+		/*position:relative;*/
+		/*display:block;*/
+		/*height:20px;*/
+		/*vertical-align: baseline; 
+		vertical-align: bottom;
+		vertical-align: text-bottom*/
+	}
+	.design_by:hover{
+		color:#a15341;
+	}
+/*MENU RODAPE*/
+		#menu-rodape{
+			margin-right:10px;
+		}
+		#menu-rodape ul {
+			padding:0px;
+			margin:0px;
+			float: right;
+			text-align:right;
+/*			width: 100%;*/
+			/*background-color:#EDEDED;*/
+			list-style:none;
+			font:80% Tahoma;
+		}
+ 
+		#menu-rodape ul li { display: inline; }
+ 
+		#menu-rodape ul li a {
+			/*background-color:#EDEDED;*/
+			color: #333;
+			text-decoration: none;
+			/*border-bottom:3px solid #EDEDED;*/
+			padding: 2px 10px;
+			color:#a15341;
+		}
+ 
+		#menu-rodape ul li a:hover {
+			/*background-color:#D6D6D6;*/
+			color: #6D6D6D;
+			border-bottom:2px solid green;
+		}
+		.inf-rodape-menu{
+			/*background:pink;*/
+			width: 100%;	
+			float:left;
+			bottom: 2px;
+			position: absolute;
+			/*z-index:1;*/
+			display:block;
+		}
+		.esconde{
+			display:none;
+			/*background:blue;*/
+			}
+		#slideshow {
+	}
+/*REDE SOCIAL*/
+
+	/*Rede Sociais*/
+	#nav-external-links {
+		padding-top: 0;
+		min-width: 300px;
+		width: auto;
+		
+		z-index:999;
+		/*position:absolute;
+		position:fixed;*/
+	}
+	#social-links li a {
+		display: block;
+		margin: 0 auto;
+		background-image: url(../img/social_sprite.png);
+		background-size: 700% 200%;
+		width: 36px;
+		height: 36px;
+		background-size: 700% 200%;
+		background-repeat: no-repeat;
+	}
+
+	#social-links li a:before {
+	content: "";
+	position: absolute;
+	top: 16px;
+	left: 12px;
+	width: 1px;
+	height: 0;
+	z-index: -1;
+	box-shadow: 0 0 27px 5px #000;
+	-webkit-transition: none;
+	-moz-transition: none;
+	transition: none;
+	}
+
+	#social-links{
+		display: inline-block;
+		vertical-align: middle;
+		font-size:0;
+	/*background:black;*/
+		z-index:999;
+	}
+	
+	#social-links li {
+		opacity: 1;
+		-webkit-transition-property: -webkit-transform;
+		-moz-transition-property: -moz-transform;
+		transition-property: transform;
+		-webkit-transition-duration: 250ms;
+		-moz-transition-duration: 250ms;
+		transition-duration: 250ms;}
+		
+	#social-links li {
+		width: auto;
+		margin: 0 7px;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		display: inline-block;
+		height:100%;
+	}
+	#social-links li a {
+		position: relative;
+		width: 28px;
+		height: 28px;
+		width: 36px;
+		height: 36px;
+		margin: 0;
+		transition: opacity 300ms;
+	}
+	#social-links li a.fb {
+		background-position: 0% 100%;/*0% - branco - é aposição do de cima*/
+	}
+	 #social-links li a.tumblr {
+		background-position: 16.66667% 100%;
+	}
+	 #social-links li a.twitter {
+		background-position: 33.33333% 100%;
+	}
+	 #social-links li a.instagram {
+		background-position: 50% 100%;
+	}
+
+	 #social-links li a.google_plus {
+		background-position: 66.66667% 100%;
+	} 	
+	 #social-links li a.youtube {
+		background-position: 83.33333% 100%;
+	}
+	
+	#social-links li a.fb:hover {
+		background-position: 0% 0%;/*0% - branco - é aposição do de cima*/
+	}
+	 #social-links li a.tumblr:hover {
+		background-position: 16.66667% 0%;
+	}
+	 #social-links li a.twitter:hover {
+		background-position: 33.33333% 0%;
+	}
+	 #social-links li a.instagram:hover {
+		background-position: 50% 0%;
+	}
+
+	 #social-links li a.google_plus:hover{
+		background-position: 66.66667% 0%;
+	} 	
+	 #social-links li a.youtube:hover {
+		background-position: 83.33333% 0%;
+	}
+
+/* content */
+/*section {
+  padding: 80px 20px 50px;
+  border-top: 1px solid #ccc;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+section:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+section img {
+  width: 44%;
+  margin: 0 0 10px 4%;
+}*/
+
+section p {
+  padding: 0 0 15px;
+}
+
+@media screen and (max-width: 767px) {
+  .cabecalho .control-nav { /* label icon */
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    display: block;
+    width: 30px;
+    padding: 5px 0;
+    border: solid #333;
+    border-width: 3px 0;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  .cabecalho .control-nav:before {
+    content: "";
+    display: block;
+    height: 3px;
+    background: #333;
+  }
+
+  .cabecalho .control-nav-close {
+    position: fixed; /* label layer */
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    z-index: 1;
+    background: rgba(0,0,0,0.4);
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+    -webkit-transform: translate(100%, 0);
+    -ms-transform: translate(100%, 0);
+    transform: translate(100%, 0);
+  }
+
+  .cabecalho nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 250px;
+    border-left: 1px solid #ccc;
+    background: #fff;
+    overflow-x: auto;
+    z-index: 2;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+    -webkit-transform: translate(100%, 0);
+    -ms-transform: translate(100%, 0);
+    transform: translate(100%, 0);
+  }
+
+  .cabecalho ul.l2 {
+    padding: 0;
+  }
+
+  .cabecalho ul.l2 li {
+    width: 100%;
+    border: solid #ccc;
+    border-width: 0 0 1px;
+  }
+
+  .cabecalho li a {
+    padding: 15px 10px;
+  }
+
+  .cabecalho li a:hover {
+    background-color: #ccc;
+  }
+
+  /* checked nav */
+  #control-nav {
+    display: block;
+  }
+
+  #control-nav:focus ~ .control-nav {
+    border-color: #000;
+    box-shadow: 0px 0px 9px rgba(0,0,0,0.3);
+  }
+
+  #control-nav:focus ~ .control-nav:before {
+    background: #000;
+  }
+
+  #control-nav:checked ~ .control-nav-close {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+
+  #control-nav:checked ~ nav {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+
+  /*header+section {
+    padding-top: 80px;
+  }
+
+  section {
+    padding: 30px 15px 10px;
+  }*/
+}
+
+@media screen and (max-width: 480px) {
+  header h1 {
+    font-size: 20px;
+    line-height: 40px
+  }
+}
+
+/*Novo CSS - Para area de conteudo da calculadora*/
+.area_conteudo{
+
+	
+}
+/**FIX bootstrap*/
+.row{
+	margin:0;
+}
+.list-group{
+	padding-left:15px;
+	/*border: 1px solid #942019; */
+}
+.bloco{
+	margin-top:5px;
+	margin-bottom:5px;
+}
+.form-control,.list-group-item{
+  z-index: 0 !important;
+}
+
+
+/*include Calculadora*/
+.calculadora_paramentros{
+	/*background:blue;*/
+	z-index:9999;
+}
+
+.quadro_questoes{
+background:gold;
+padding:0px;
+}
+
+.cabecalho-listagem{
+  /*#corazul #337ab7*/
+  /*border-color:#942019 !important; 
+  border-color:#ccc !important; 
+  background:#942019!important;  
+  background:#ccc!important;*/  
+  text-align:center;
+}

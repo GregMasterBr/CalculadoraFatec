@@ -1,0 +1,31 @@
+<form name="FormInstCurPer">
+	<div class="instituicao-curso-periodo">
+		<p class="instituicao">
+			<label>Fatec</label>
+			<select class="selectBox form-control" ng-required="true" ng-init="selectedCurso=0" name="instituicao"  ng-model="selectedFatec.cod_instituicao" ng-options="fatecInst.cod_instituicao as fatecInst.fatec for fatecInst in Fatecs ">
+				<option value="" >Selecione...</option>
+			</select>
+			<!--{{selectedFatec}}-->
+			<input type="hidden" ng-model="selectedFatec" />
+		</p>
+							
+		<p class="curso_instituicao"> 
+			<label>Curso</label>
+			<select class="selectBox form-control" ng-required="true" name="curso"  ng-model="selectedCurso.cod_curso"  ng-options="cur.cod_curso as cur.curso for cur in Cursos | filter:{cod_instituicao:selectedFatec.cod_instituicao}:true | unique:'cod_curso' ">
+				<option value="" style="background:gray;"><strong>Selecione...</strong></option>
+			</select>
+			<input type="hidden" ng-model="selectedCurso" />
+		</p>
+			
+		<p class="periodo_curso_intituicao">
+			<label>Período</label>
+			<select class="selectBox form-control" name="periodo" ng-required="true" ng-model="selectedPeriodo"  ng-options="per.periodo as per.periodo for per in Cursos | filter:{cod_curso:selectedCurso.cod_curso}:true | filter:{cod_instituicao:selectedFatec.cod_instituicao}:true ">
+				<option value="" >Selecione...</option>
+			</select>   
+		</p>					
+						
+	</div>				
+	<p>
+		<button type="button" class="btn btn-primary btn-lg btn-block active" ng-click="getInclude('calculadora')" ng-disabled="FormInstCurPer.$invalid">AVANÇAR</button>
+	</p>
+</form>

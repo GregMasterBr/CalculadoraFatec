@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR" ng-app="CalculadoraFatecApp">
+    <head>
+    <meta charset="UTF-8" >
+    <title>Calculadora FATEC :: GregMaster</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" href="gregmaster.ico">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="author" content="Gregório de Almeida Queiroz,GregMaster, www.grgmaster.com.br,www.gregorioalmeidaqueiroz.wordpress.com" />
+    <meta name="description" content="Esta ferramenta é um complemento do vestilar da fatec, nele contém diversos utilitários, sendo o mais importante a calculadora de cálculo estimativo da nota final">
+    <meta name="keywords" content="Fatec,Calculadora Fatec, Vestibular, Provas e Gabaritos, Nota de Corte, Consulta" />
+	<link href="js/shadowbox/shadowbox.css" rel="stylesheet" type="text/css" />
+	 <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/estilo.css" />
+    <script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
+    <script src="js/calculadora.js" type="text/javascript"></script>
+			<script src="includes/line/Chart.js"></script>
+
+  </head>
+  <body >
+	<div class="pagina">
+		<header class="cabecalho">
+		  <img src="img/calculadora.png" class="calculadora" />
+		  <h1 class="">
+			Calculadora Fatec
+			<!--input type="text" ng-model="nome">
+			<p>Olá, Tableless! Meu nome é: {{ nome }}</p-->
+		  </h1>
+      
+		  <input type="checkbox" id="control-nav" />
+		  <label for="control-nav" class="control-nav"></label>
+		  <label for="control-nav" class="control-nav-close"></label>
+
+		  <nav class="fR">
+			<ul class="l2">
+			  <li>
+				<a href="index.html" title="Calculadora">Calculadora</a>
+			  </li>
+			  <li>
+				<a href="http://www.vestibularfatec.com.br/provas-gabaritos/" rel="shadowbox;" title="Provas&Gabaritos">Provas&Gabaritos</a>
+			  </li>
+			  <li>
+				<a href="docs/calendario.png" title="Calendário Vestibular 2015"  rel="shadowbox;width=882;height=770;">Calendário</a>
+			  </li>
+			  <li>
+				<a href="docs/2014/2/manual_candidato.pdf" title="Manual Vestibular 2015" rel="shadowbox;">Manual</a>
+			  </li>
+			</ul>
+		  </nav>
+		</header>
+		<div class="conteudo" ng-controller="ControllerPrincipal"> <!-- controlador lógico-->
+		<!--h2>{{ text }}</h2-->
+			<article class="main row">
+				<section class="col-esquerda col-md-3">
+					<h3 >Calculadora - Cálculo da nota do Vestibular Fatec</h3>
+					    <!--select ng-model="template" ng-options="t.name for t in templates">
+						 <option value="">(blank)</option>
+						</select-->
+							{{template.url}}
+					<!--div ng-include="'includes/instituicao_curso_periodo.html'"-->
+					<div ng-include="template.url" onload='myFunction()'>
+
+					</div>
+				</section>
+				<section class="area_conteudo col-central col-md-9">
+		<div ng-include="'includes/estatisticas.html'">
+		
+		</div>
+				<a href="includes/estatisticas.html" target="_blank">Teste</a>
+					
+				</section>
+				<section class="col-md-3">
+				<p class="regra"><a href="docs/regra_calculo_nota.png" rel="shadowbox;" title="Regra de Composição para o Cálculo da Nota">Regra de Composição para o Cálculo da Nota</a> </p>
+				</p>
+			</article>	
+			<div class="row">
+			<section class="col-md-3">
+				<p class="regra"><a href="docs/regra_calculo_nota.png" rel="shadowbox;" title="Regra de Composição para o Cálculo da Nota">Regra de Composição para o Cálculo da Nota</a> </p>
+				</p>
+			</div>
+		</div>
+        <footer class="content" id="containerRodape">
+			  <div id="icone" class="plus" title="Clique Aqui"></div>
+			  <div id="rodape">
+				  <a class="marca_srt" href="http://www.gregmaster.com.br" target="_blank" >::GregMaster::</a>				  
+				  <a href="http://www.gregmaster.com.br" target="_blank"><img src="img/gregmaster.png" class="img_rodape" alt="Logotipo GregMaster opacidade de 40%, localizada ao centro do rodapé do site" /> </a>
+				  <div class="clearfix"></div>
+				  <div class="inf-rodape-menu esconde" id="inf-rodape-menu">
+					  <!--a class="design_by" href="http://www.gregmaster.com.br" target="_blank">Desenvolvido por GregMaster © Copyright 2014</a-->
+					  <div id="nav-external-links">
+						  <ul id="social-links">
+							  <li>
+								<a class="fb" href="https://www.facebook.com/GregMasterBr" target="_blank" title="Facebook"></a>
+							  </li>
+							  <li>
+								<a class="twitter" href="#" target="_blank" title="Twitter"></a>
+							  </li>
+							  <li>
+								<a class="tumblr" href="#" target="_blank" title="Tumblr" ></a>
+							  </li>
+							  <li>
+								<a class="instagram" href="#" target="_blank" title="Instagram" ></a>
+							  </li>
+							  <li>
+								<a class="google_plus" href="https://plus.google.com/+GregmasterBrWeb/posts" target="_blank" title="Google Plus"></a>
+							  </li>
+							  <li>
+								<a class="youtube" href="https://www.youtube.com/user/greg17031991" target="_blank" title="Youtube" ></a>
+							  </li>
+						  </ul>
+
+					  </div>					  
+					  <nav id="menu-rodape">
+						<ul>
+						  <li>
+							<a href="index.html" title="Calculadora">Calculadora</a>
+						  </li>
+						  <li>
+							<a href="paginas/provas-gabaritos.html" title="Provas&Gabaritos">Provas&Gabaritos</a>
+						  </li>
+						  <li>
+							<a href="paginas/calendariio.html" title="Calendário">Calendário</a>
+						  </li>
+						  <li>
+							<a href="paginas/manual.html" title="Manual">Manual</a>
+						  </li>
+						</ul>
+					   </nav>
+					</div>
+			  </div>
+			   
+		</footer>		
+		
+	</div>
+        <script src="js/angular-1.3.15.min.js"></script>
+		<script type="text/javascript" src="app/app.js"></script>
+	    <script type="text/javascript" src="js/shadowbox/shadowbox.js"></script>
+		<script type="text/javascript">
+			/*shadowbox*/
+			 Shadowbox.init({
+			 language: 'pt',
+			 player: ['img', 'html', 'swf']
+			 });
+		</script>
+		<script type="text/javascript" src="js/rodape.js"></script>
+		<script src="js/Chart.js"></script>
+			<script>
+		var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
+		var lineChartData = {
+			labels : ["January","February","March","April","May","June","July"],
+			datasets : [
+				{
+					label: "My First dataset",
+					fillColor : "rgba(220,220,220,0.2)",
+					strokeColor : "rgba(220,220,220,1)",
+					pointColor : "rgba(220,220,220,1)",
+					pointStrokeColor : "#fff",
+					pointHighlightFill : "#fff",
+					pointHighlightStroke : "rgba(220,220,220,1)",
+					data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+				},
+				{
+					label: "My Second dataset",
+					fillColor : "rgba(151,187,205,0.2)",
+					strokeColor : "rgba(151,187,205,1)",
+					pointColor : "rgba(151,187,205,1)",
+					pointStrokeColor : "#fff",
+					pointHighlightFill : "#fff",
+					pointHighlightStroke : "rgba(151,187,205,1)",
+					data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+				}
+			]
+
+		}
+
+	window.onload = function(){
+		var ctx = document.getElementById("canvas").getContext("2d");
+		window.myLine = new Chart(ctx).Line(lineChartData, {
+			responsive: true
+		});
+	}
+
+
+	</script>
+  </body>
+</html>

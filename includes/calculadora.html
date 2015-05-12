@@ -1,0 +1,109 @@
+<h3 >Cálculo da nota do Vestibular Fatec</h3>
+	<div ng-controller="CalcCtrl" class="calculadora_paramentros" >
+		
+		<div class="row">
+			<form name="FormCalculadora">
+				<div class="col-md-12 bloco quadro_questoes">
+					<div class="input-group">
+					  <span class="input-group-addon">
+						<span style="font-weight:bold; color: #942019;" >Questões Peso 1</span>
+						<input type="number" min="0"  max="44" ng-maxlength="2" ng-pattern="/^\d{1,2}$/" name="qtde_peso1" class="form-control" aria-label="..." ng-model="qpeso1" ng-required="true"/> 
+					  </span>
+					
+					 <span class="input-group-addon">
+					   <span style="font-weight:bold; color: #942019;">Questões Peso 2</span>
+						 <input type="number" min="0" max="10" ng-maxlength="2" name="qtde_peso2"  class="form-control" aria-label="..." ng-model="qpeso2" ng-required="true" />
+					  </span>
+					</div>
+			   </div><!-- /.col-lg-6 -->					   
+
+				<div class="list-group col-md-12 bloco">
+				   <div class="list-group-item active cabecalho-listagem">
+					  <h4 class="list-group-item-heading">
+						 Estimativa Nota da Redação
+					  </h4>
+				   </div>
+				   <div class="list-group-item">
+					  <h4 class="list-group-item-heading">
+						 <input type="number" class="form-control" aria-label="..." ng-model="redacao" min="0" max="100" ng-maxlength="3"  ng-required="true"/> 
+					  </h4>
+					  <p class="list-group-item-text" style="color: #8a6d3b;font-weight:bold;">
+						 Pontuação máxima 100.
+					  </p>
+					  <!--div class="alert alert-success" role="alert">
+					  	 Pontuação máxima 100.
+					  	</div-->
+				   </div>
+
+				</div>			   
+				   
+			  <div class="col-md-12 bloco">
+				<div class="input-group">
+				  <span class="input-group-addon">
+					<input type="checkbox" aria-label="..." ng-model="enem" ng-init="checked=false" /> Utilizar Enem
+				  </span>
+				  <input type="number" class="form-control" aria-label="..." ng-model="nota_enem" min="0" max="1000"  ng-disabled="!enem" />
+				</div><!-- /input-group -->
+			  </div><!-- /.col-lg-6 -->
+	
+				<div class="list-group col-md-12 bloco">
+				   <div class="list-group-item active cabecalho-listagem">
+					  <h4 class="list-group-item-heading">
+						 Sistema de Pontuação Acrescida
+					  </h4>
+				   </div>
+				   <div class="list-group-item">
+					  <h4 class="list-group-item-heading">
+						 <input type="checkbox" aria-label="..." ng-model="afrodescendencia" /> Afrodescendência
+					  </h4>
+					  <!--p class="list-group-item-text">
+						 You will get a free domain registration with website pages.
+					  </p-->
+				   </div>
+				   <div class="list-group-item">
+						<h4 class="list-group-item-heading">
+							<input type="checkbox" aria-label="..." ng-model="escola_publica"/> Escolaridade Pública
+						</h4>						
+					    <!--p class="list-group-item-text">We provide 24*7 support.</p-->
+				   </div>
+				</div>
+				<div class="col-md-12 bloco">
+				 <div >
+					<button type="button" class="btn btn-danger btn-lg btn-block" ng-click="CalcularNota()"  ng-disabled="FormCalculadora.$invalid">Calcular</button>
+				  </div>
+				</div>					   
+				<div class="list-group col-md-12 bloco">
+				   <div class="list-group-item active cabecalho-listagem">
+					  <h4 class="list-group-item-heading">
+						  Estimativa da Nota
+					  </h4>
+				   </div>
+				   <div class="list-group-item">
+					  <h4 class="list-group-item-heading">
+						 <input type="text" class="form-control" aria-label="..." ng-model="resultado" ng-disabled="true"  /> 
+					  </h4>
+					  <!--p class="alert alert-info">
+						Boa Sorte =)
+					  </p-->
+				   </div>
+
+				</div>	
+		<p>
+			<button type="button" class="btn btn-primary btn-sm  active"  ng-click="getInclude('instituicao')" > &laquo; Escolher outra Instituição</button>
+		</p>
+	
+			<!--div class="help-block alert alert-danger">	
+				Por favor informe o número de acerto de Questões
+			</div-->
+		
+		</form>  
+
+
+	</div><!-- /.row -->
+
+	</div>
+<!--http://jsfiddle.net/scyrizales/mUJhL/-->
+
+
+
+	

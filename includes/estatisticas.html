@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Line Chart</title>
+    <style>
+      .bs-callout {
+  padding: 20px;
+  margin: 20px 0;
+  border: 1px solid #eee;
+  border-left-width: 5px;
+  border-radius: 3px;
+}
+.bs-callout-info {
+  border-left-color: #1b809e;
+}
+.bs-callout-warning {
+  border-left-color: #aa6708;
+}
+.bs-callout-danger {
+  border-left-color: #ce4844;
+}
+body {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+  background-color: #fff;
+}
+    </style>
+	</head>
+	<body>
+  <div class="container">
+    <section id="directives">
+      <div class="page-header">
+        <h1>Teste de ChartJS</h1>
+      </div>
+      <div class="row">
+        <!--div class="col-lg-6 col-sm-12" id="line-chart" ng-controller="LineCtrl">
+          <div class="panel panel-default">
+            <div class="panel-heading">Fatec - Estatística</div>
+            <div class="panel-body">
+              <canvas id="line" class="chart chart-line" data="data" labels="labels" legend="true"
+                      click="onClick" hover="onHover" series="series"></canvas>
+            </div>
+          </div>
+        </div-->
+                  <div class="bs-callout bs-callout-info" id="callout-navbar-breakpoint">
+            <h4 id="changing-the-collapsed-mobile-navbar-breakpoint">Changing the collapsed mobile navbar breakpoint<a class="anchorjs-link" href="#changing-the-collapsed-mobile-navbar-breakpoint"><span class="anchorjs-icon"></span></a></h4>
+            <p>The navbar collapses into its vertical mobile view when the viewport is narrower than <code>@grid-float-breakpoint</code>, and expands into its horizontal non-mobile view when the viewport is at least <code>@grid-float-breakpoint</code> in width. Adjust this variable in the Less source to control when the navbar collapses/expands. The default value is <code>768px</code> (the smallest "small" or "tablet" screen).</p>
+          </div>
+        <div class="col-lg-6 col-sm-12" id="bar-chart" ng-controller="BarCtrl">
+          <div class="panel panel-default">
+            <div class="panel-heading">Bar Chart</div>
+            <div class="panel-body">
+              <canvas id="bar" class="chart chart-bar" data="data" labels="labels" series="series"
+                      options="options"></canvas>
+            </div>
+          </div>
+        </div>        
+      </div>
+      </section>
+ </div>
+
+
+
+	</body>
+</html>

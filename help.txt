@@ -1,0 +1,20 @@
+https://www.google.com.br/search?q=select+atrav%C3%A9s+de+um+json+angular+JS&oq=select+atrav%C3%A9s+de+um+json+angular+JS&aqs=chrome..69i57.8655j0j1&sourceid=chrome&es_sm=93&ie=UTF-8
+
+
+	http://www.linhadecodigo.com.br/artigo/3694/carregando-dropdownlists-em-cadeia-com-angularjs.aspx
+
+http://www.guj.com.br/28596-angularjs-filter-select 
+
+
+http://stackoverflow.com/questions/19950165/ng-options-from-a-json-with-angularjs (PRINCIPAL)
+
+http://jsfiddle.net/9Ymvt/741/
+
+
+
+
+
+http://www.devmedia.com.br/populando-selects-dinamicamente-com-ajax-json-e-php/27658
+
+http://css.dzone.com/articles/angularjs-ng-select-and-ng-0
+http://jsfiddle.net/jm6of9bu/2/
